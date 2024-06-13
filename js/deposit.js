@@ -1,22 +1,21 @@
-// step 1: add event listener
+//step-1: add event handler
 document.getElementById('btn-deposit').addEventListener('click', function(){
-    //step 2: get the deposit amount from the input field
-    const depositAmount = document.getElementById('deposit-input').value;
+    //step-2: get the deposit amount
+    const depositAmount = getAmount('deposit-amount');
 
-    //step 3: get the current deposit total
-    const previousdepositTotal = document.getElementById('deposit-total');
+    //step-3: get current deposit total
+    const depositTotal = getElementValue('deposit-total')
 
-    //step 4: add numbers to set the total deposit
-    const newDepositTotal = parseFloat(previousdepositTotal.innerText) + parseFloat(depositAmount);
-    previousdepositTotal.innerText = newDepositTotal;
+    //step-4: update the deposit total
+    const previousDepositTotal = getElement('deposit-total');
+    previousDepositTotal.innerText = depositTotal + depositAmount;
 
-    //step 5: get balance total
-    const balanceTotalElement = document.getElementById('balance-total');
-    const previousbalanceTotal = parseFloat(balanceTotalElement.innerText);
+    //step-5: get the current balance
+    const currentBalanceTotal = getElementValue('balance-total');
 
-    //step 6: update new balance by subtracting the deposit amount
-    balanceTotalElement.innerText = previousbalanceTotal + parseFloat(depositAmount);
+    //step-6: update the balance
+    const balanceNow = getElement('balance-total');
+    balanceNow.innerText = currentBalanceTotal + depositAmount;
 
-    //step 7: clear the input field
-    document.getElementById('deposit-input').value = '';
+    //step-7: clear the input field
 })

@@ -3,47 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bank Inside</title>
+    <title>Functional Baap er bank</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
     <header>
-        <h1 class="text-5xl text-center font-semibold text-violet-500">Let's get some Money</h1>
+        <h1 class="text-center text-5xl mt-4">Functional <span class="font-medium text-violet-600">Baap er bank</span>!!!</h1>
     </header>
     <main>
-        <section class="mt-12">
+        <!-- Dashboard Section-->
+        <section class="mt-8">
             <div class="grid grid-cols-3 gap-4 w-9/12 mx-auto text-white">
-                <div class="bg-green-400 p-8 rounded-xl">
+                <div class="bg-yellow-400 p-8 rounded-lg">
                     <h4 class="text-2xl">Deposit</h4>
-                    <h3 class="text-5xl">$<span id="deposit-total">00</span></h3>
+                    <h2 class="text-5xl">$<span id="deposit-total" class="font-semibold">00</span></h2>
                 </div>
-                <div class="bg-pink-400 p-8 rounded-xl">
+                <div class="bg-sky-400 p-8 rounded-lg">
                     <h4 class="text-2xl">Withdraw</h4>
-                    <h3 class="text-5xl">$<span id="withdraw-total">00</span></h3>
+                    <h2 class="text-5xl">$<span id="withdraw-total" class="font-semibold">00</span></h2>
                 </div>
-                <div class="bg-yellow-400 p-8 rounded-xl">
+                <div class="bg-pink-400 p-8 rounded-lg">
                     <h4 class="text-2xl">Balance</h4>
-                    <h3 class="text-5xl">$<span id="balance-total">1240</span></h3>
+                    <h2 class="text-5xl">$<span id="balance-total" class="font-semibold">1240</span></h2>
                 </div>
             </div>
         </section>
-        <section class="mt-12">
+        <!--Deposit and withdraw section-->
+        <section class="mt-8">
             <div class="grid grid-cols-2 gap-4 w-9/12 mx-auto text-white">
-                <div class="bg-violet-300 p-8">
-                    <h4 class="text-2xl">Please Deposit</h4>
-                    <input type="number" name="" id="deposit-input" placeholder="$ amount" class="block w-9/12 p-2 rounded text-black mt-4">
-                    <button type="submit" class="bg-sky-900 hover:bg-sky-800 py-4 px-12 text-center font-medium mt-4 rounded-lg" id="btn-deposit">Deposit</button>
+                <div class="bg-rose-400 p-8">
+                    <h4 class="text-2xl font-semibold">Deposit Now</h4>
+                    <input type="number" name="" id="deposit-amount" class="block w-9/12 p-2 my-4 text-black rounded" placeholder="$amount">
+                    <button type="submit" id="btn-deposit" class="bg-emerald-900 hover:bg-emerald-800 py-2 px-12 rounded-lg font-semibold">Deposit</button>
                 </div>
-                <div class="bg-indigo-300 p-8">
-                    <h4 class="text-2xl">Please Withdraw</h4>
-                    <input type="number" name="" id="withdraw-input" placeholder="$ amount" class="block w-9/12 p-2 text-black mt-4 rounded">
-                    <button type="submit" class="bg-sky-900 hover:bg-sky-800 py-4 px-12 text-center font-medium mt-4 rounded-lg" id="btn-withdraw">Withdraw</button>
+                <div class="bg-violet-400 p-8">
+                    <h4 class="text-2xl font-semibold">Withdraw Now</h4>
+                    <input type="number" name="" id="withdraw-amount" class="block w-9/12 p-2 my-4 text-black rounded" placeholder="$amount">
+                    <button type="submit" id="btn-withdraw" class="bg-emerald-900 hover:bg-emerald-800 py-2 px-12 rounded-lg font-semibold">Withdraw</button>
                 </div>
             </div>
         </section>
     </main>
 
-
+    <script src="js/utilities.js"></script>
     <script src="js/deposit.js"></script>
     <script src="js/withdraw.js"></script>
 </body>
